@@ -1,7 +1,7 @@
 {
   "name": "sipgate-adapter",
   "display_name": "Sipgate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Send SMS from your Sipgate account",
   "main": "index.js",
   "scripts": {
@@ -52,7 +52,7 @@
         },
         "smsId": {
           "type": "string",
-          "title": "The sms id"
+          "title": "The sms id (default 's0', check https://api.sipgate.com/v2/doc#/sms/getSmsExtensions for a list of your sms ids)"
         },
         "messages": {
           "type": "array",
