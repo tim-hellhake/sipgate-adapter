@@ -1,0 +1,94 @@
+{
+  "name": "sipgate-adapter",
+  "display_name": "Sipgate",
+  "version": "0.1.0",
+  "description": "Send SMS from your Sipgate account",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-hellhake/sipgate-adapter.git"
+  },
+  "author": "Tim Hellhake",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/tim-hellhake/sipgate-adapter/issues"
+  },
+  "homepage": "https://github.com/tim-hellhake/sipgate-adapter#readme",
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "index.js",
+    "sipgate-adapter.js"
+  ],
+  "moziot": {
+    "api": {
+      "min": 2,
+      "max": 2
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}",
+    "config": {
+      "smsId": "s0"
+    },
+    "schema": {
+      "type": "object",
+      "required": [
+        "email",
+        "password",
+        "smsId"
+      ],
+      "properties": {
+        "email": {
+          "type": "string",
+          "title": "The email of the sipgate user"
+        },
+        "password": {
+          "type": "string",
+          "title": "The password of the sipgate user"
+        },
+        "smsId": {
+          "type": "string",
+          "title": "The sms id"
+        },
+        "messages": {
+          "type": "array",
+          "title": "Predefined messages",
+          "items": {
+            "type": "object",
+            "title": "A predefined message",
+            "required": [
+              "name",
+              "recipient",
+              "message"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "The name of the action"
+              },
+              "recipient": {
+                "type": "string",
+                "title": "The phone number of the recipient"
+              },
+              "message": {
+                "type": "string",
+                "title": "The text of the message"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0"
+  }
+}
