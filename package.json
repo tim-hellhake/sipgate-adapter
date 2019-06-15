@@ -1,7 +1,7 @@
 {
   "name": "sipgate-adapter",
   "display_name": "Sipgate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Send SMS from your Sipgate account",
   "main": "index.js",
   "scripts": {

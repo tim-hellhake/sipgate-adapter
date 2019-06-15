@@ -9,7 +9,8 @@
 Send SMS from your Sipgate account.
 
 ## Configuration
-1. Add your credentials to the config
+1. Go to https://app.sipgatebasic.de/feature-store/sms-senden#book and enable the SMS feature for your account
+2. Add your credentials to the config
 
 ## Usage
 The addon registers a Sipgate device with a `Send SMS(application, event, description)` action.
