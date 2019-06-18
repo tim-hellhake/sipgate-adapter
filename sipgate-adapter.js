@@ -27,6 +27,14 @@ class SipgateDevice extends Device {
       messages
     } = manifest.moziot.config;
 
+    if (!email) {
+      console.warn('No email set');
+    }
+
+    if (!password) {
+      console.warn('No password set');
+    }
+
     this.addCallbackAction({
       title: 'Send SMS',
       description: 'Send a SMS',
