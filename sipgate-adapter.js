@@ -36,7 +36,7 @@ class SipgateDevice extends Device {
     }
 
     if (!smsId) {
-      console.warn('No password set');
+      console.warn('No smsId set');
     }
 
     this.addCallbackAction({
