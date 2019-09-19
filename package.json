@@ -22,7 +22,8 @@
     "LICENSE",
     "SHA256SUMS",
     "index.js",
-    "sipgate-adapter.js"
+    "sipgate-adapter.js",
+    "manifest.json"
   ],
   "moziot": {
     "api": {
