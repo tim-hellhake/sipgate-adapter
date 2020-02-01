@@ -7,6 +7,9 @@
 'use strict';
 
 const SipgateAdapter = require('./sipgate-adapter');
+const SipgateNotifier = require('./sipgate-notifier');
 
-module.exports =
-    (addonManager, manifest) => new SipgateAdapter(addonManager, manifest);
+module.exports = (addonManager, manifest) => {
+  new SipgateAdapter(addonManager, manifest);
+  new SipgateNotifier(addonManager, manifest);
+};
