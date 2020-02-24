@@ -3,7 +3,7 @@
   "id": "sipgate-adapter",
   "name": "Sipgate",
   "short_name": "Sipgate",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Send SMS from your Sipgate account",
   "homepage_url": "https://github.com/tim-hellhake/sipgate-adapter#readme",
   "license": "MPL-2.0",
