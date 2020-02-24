@@ -3,10 +3,10 @@
   "display_name": "Sipgate",
   "version": "0.2.1",
   "description": "Send SMS from your Sipgate account",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,9 @@
   "files": [
     "LICENSE",
     "SHA256SUMS",
-    "index.js",
-    "sipgate-adapter.js",
-    "sipgate-notifier.js",
+    "lib/index.js",
+    "lib/sipgate-adapter.js",
+    "lib/sipgate-notifier.js",
     "manifest.json"
   ],
   "moziot": {
@@ -118,7 +118,8 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1"
+    "@types/node": "^13.7.4",
+    "@types/node-fetch": "^2.5.4",
+    "typescript": "^3.8.2"
   }
 }
